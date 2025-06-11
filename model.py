@@ -1,6 +1,5 @@
 import clip
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import yaml
@@ -62,14 +61,3 @@ class Model:
             'confidence': model_confidance
         }
         return prediction
-
-    @staticmethod
-    def plot_image(image: np.array, title_text: str):
-        plt.figure(figsize=[13, 13])
-        plt.title(title_text)
-        plt.axis('off')
-        if len(image.shape) == 3:
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        plt.imshow(image)
-
-
