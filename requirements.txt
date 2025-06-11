@@ -5,4 +5,4 @@ matplotlib
 opencv_python
 Pillow
 PyYAML
-torch==1.7.1+cu110
+torch==1.7.1
