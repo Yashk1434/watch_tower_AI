@@ -12,7 +12,7 @@ class Model:
             self.settings = yaml.safe_load(file)
 
         # Initialize device
-        self.device = torch.device("cuda")
+        self.device = torch.device("cpu")
         self.model_name = self.settings['model-settings']['model-name']
         self.threshold = self.settings['model-settings']['prediction-threshold']
         self.model, self.preprocess = clip.load(self.model_name, device=self.device)
